@@ -32,7 +32,9 @@ function Board({xIsNext, squares, onPlay, color, handleColor, resetColor}) {
     let status;
     if (winner) {
       status = "Winner: " + winner;
-      
+      setTimeout(() => {
+        alert(`${winner} you beauty! You have won!`)
+      }, 10);
     } else {
       status = "Next player: " + (xIsNext ? "X" : "O");
     }
